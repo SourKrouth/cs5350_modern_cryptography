@@ -151,6 +151,7 @@ def get_key_length(c):
             key_length = t
     return key_length
 
+# Something is wrong with this? 
 def calculate_plaintext(c, k):
     p = ""
     for i in range(0, len(c)):
