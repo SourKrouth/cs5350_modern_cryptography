@@ -1,0 +1,74 @@
+\documentclass[fleqn]{article}
+\usepackage{times}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{listings} % Package to use a math escape in verbatim mode
+\usepackage{amsmath}
+\usepackage{graphicx}  
+\usepackage{xcolor}
+\usepackage{comment}
+\usepackage{forest}
+\usepackage[normalem]{ulem}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0.1in}
+
+ \lstset{
+  basicstyle=\ttfamily,
+  breaklines=true,
+  columns=flexible,
+  numbers=left,
+}
+
+\begin{document}
+
+\section{Introduction}
+
+\subsection{Decrypt the ciphertext provided at the end of the section on monoalphabetic substitution ciphers.}
+
+\begin{verbatim}
+JGRMQOYGHMVBJWRWQFPWHGFFDQGFPFZRKBEEBJIZQQOCIBZKLFAFGQVFZFWWE
+OGWOPFGFHWOLPHLRLOLFDMFGQWBLWBWQOLKFWBYLBLYLFSFLJGRMQBOLWJVFP
+FWQVHQWFFPQOQVFPQOCFPOGFWFJIGFQVHLHLROQVFGWJVFPFOLFHGQVQVFILE
+OGQILHQFQGIQVVOSFAFGBWQVHQWIJVWJVFPFWHGFIWIHZZRQGBABHZQOCGFHX
+\end{verbatim}
+
+\subsection{Provide a formal definition of the Gen, Enc, and Dec algorithms for the
+mono-alphabetic substitution cipher.}
+
+\textit{Gen:} Letting $A = \{a, b, c, ..., z\}$, Gen is the function that \textit{uniformly} generates a one-to-one and onto (\textit{bijective}) mapping from $A$ to $A$.
+
+\textit{Enc:} Denoting the output of $Gen$ as $k$, $Enc$ is the function that replaces each character, $p_i$, in the plaintext with the value given by $k(p_i)$. 
+
+\textit{Dec:} $Dec$ is the function that replaces each character, $c_i$ in the ciphertext with the value given by $k^{-1}(c_i)$.
+
+\subsection{Provide a formal definition of the Gen, Enc, and Dec algorithms for
+the Vigenere cipher. (Note: there are several plausible choices for Gen;
+choose one.)}
+
+\textit{Gen:} $Gen$ uniformly and randomly chooses an integer $t$ and generates $k = k_1k_2...k_t$ by choosing $k_i = A_j$, where $A_j$ is a uniformly random choice from $A = \{a, b, c, ..., z\}$. 
+
+\textit{Enc:} Assuming that we have $a = 0, b=1, ..., z = 25$, $Enc$ is given by the function that calculates the $i$th value of the ciphertext as $c_i = (p_i + k_{(i \text{ mod } t) + 1}) \text{ mod } 26$.
+
+\textit{Dec:} $p_i = (c_i - k_{(i \text{ mod } t) + 1}) \text{ mod } 26$
+
+\subsection{Implement the attacks described in this chapter for the shift cipher and
+the Vigenere cipher.}
+
+\subsection{Show that the shift, substitution, and Vigenere ciphers are all trivial to
+break using a chosen-plaintext attack. How much chosen plaintext is
+needed to recover the key for each of the ciphers?}
+
+\subsection{Assume an attacker knows that a user’s password is either abcd or bedg.
+Say the user encrypts his password using the shift cipher, and the attacker sees the resulting ciphertext. Show how the attacker can determine the user’s password, or explain why this is not possible.}
+
+\subsection{Repeat the previous exercise for the Vigenere cipher using period 2, using period 3, and using period 4.}
+
+\subsection{The shift, substitution, and Vigen`ere ciphers can also be defined over
+the 128-character ASCII alphabet (rather than the 26-character English
+alphabet).}
+
+\subsubsection{Provide a formal definition of each of these schemes in this case.}
+
+\subsubsection{Discuss how the attacks we have shown in this chapter can be modified to break each of these modified schemes.}
+\end{document}
