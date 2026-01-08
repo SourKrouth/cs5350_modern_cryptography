@@ -35,7 +35,7 @@ plaintext = input("Enter some plaintext to encrypt (no spaces): ").lower()
 if not plaintext.isalpha():
     print("Bad input")
     sys.exit(1)
-key_string= input("Enter the key string: ")
+key_string= input("Enter the key string: ").lower()
 if not key_string.isalpha():
     print("Bad offset")
     sys.exit(1)
@@ -140,7 +140,7 @@ def get_key(ks):
     return k_str
 
 def get_key_length(c):
-    MAX_KEY_LENGTH = min(len(c), 5)
+    MAX_KEY_LENGTH = 5
     best_diff = math.inf 
     key_length = MAX_KEY_LENGTH
     for t in range(1, MAX_KEY_LENGTH + 1):
@@ -150,6 +150,13 @@ def get_key_length(c):
             best_diff = diff
             key_length = t
     return key_length
+
+def calculate_plaintext(c, k):
+    p = ""
+    for i in range(0, len(c)):
+       # ciphertext += chr((ord(plaintext[i]) - ord('a') + ord(key_string[i % len(key_string)]) - ord('a')) % 26 + ord('a'))
+       p += chr((ord(c[i]) - ord('a') - ord(k[i % len(k)]) - ord('a')) % 26 + ord('a')) 
+    return p
 
 print("-----------")
 t = get_key_length(ciphertext)
@@ -167,3 +174,5 @@ key = get_key(keys)
 print()
 print("CALCULATED KEY:")
 print(f"\t{key}")
+print(f"CALCULATED PLAINTEXT:")
+print(f"\t{calculate_plaintext(ciphertext, key)}")
