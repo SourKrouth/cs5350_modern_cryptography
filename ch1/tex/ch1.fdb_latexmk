@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1767902276 "/home/bjkrouth/cs5350/ch1/tex/ch1.tex" "ch1.pdf" "ch1" 1767902277
+["pdflatex"] 1767922667 "/home/bjkrouth/cs5350/ch1/tex/ch1.tex" "ch1.pdf" "ch1" 1767922668
   "/etc/texmf/web2c/texmf.cnf" 1767836626 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/bjkrouth/cs5350/ch1/tex/ch1.tex" 1767902275 3270 0bb7775a9a07c9c7d4d0907f2ec5a40c ""
+  "/home/bjkrouth/cs5350/ch1/tex/ch1.tex" 1767922667 4100 1dd3a45eb1a8d296e319ee69f8d8e760 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -167,8 +167,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1767838767 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1767838784 2799678 8cf05335ed7faf07c2f8f1d096b99217 ""
-  "ch1.aux" 1767902277 2425 c5eb4854b36fc3788ed82843d2d8a550 "pdflatex"
-  "ch1.tex" 1767902275 3270 0bb7775a9a07c9c7d4d0907f2ec5a40c ""
+  "ch1.aux" 1767922668 2425 62518c553c0f5458bf027cd112ec9497 "pdflatex"
+  "ch1.tex" 1767922667 4100 1dd3a45eb1a8d296e319ee69f8d8e760 ""
   (generated)
   "ch1.aux"
   "ch1.log"

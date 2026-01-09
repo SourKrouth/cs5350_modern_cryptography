@@ -61,8 +61,16 @@ See shift.py and vigenere.py
 break using a chosen-plaintext attack. How much chosen plaintext is
 needed to recover the key for each of the ciphers?}
 
+\textit{Shift:} We just need one character of plaintext: Obtain the ciphertext and observe the difference mod 26 between the plaintext and ciphertext. That is the shift.
+
+\textit{Substitution:} We need 26 characters of plaintext: Obtain the ciphertext for a string containing all letters of the alphabet and observe the corresponding mappings in the ciphertext.
+
+\textit{Vigenere:} We would need to choose a plaintext string that is at least as long as the longest possible key length and observe the offset. Whenever the offsets begin repeating, we have discovered the key.
+
 \subsection{Assume an attacker knows that a user’s password is either abcd or bedg.
 Say the user encrypts his password using the shift cipher, and the attacker sees the resulting ciphertext. Show how the attacker can determine the user’s password, or explain why this is not possible.}
+
+With a shift cipher, each character of the plaintext is offset by the same amount. If the user's password is abcd, then the first two characters will be offset by 1, and if the user's password is bedg, then the first two characters will be offset by 3.
 
 \subsection{Repeat the previous exercise for the Vigenere cipher using period 2, using period 3, and using period 4.}
 
